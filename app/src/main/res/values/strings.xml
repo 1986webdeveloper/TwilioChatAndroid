@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChatQuickstart</string>
+    <string name="error_retrieving_access_token">Error retrieving access token from the server.</string>
+    <string name="send">Send</string>
+    <string name="title_activity_preview">PreviewActivity</string>
+    <string name="enter_identity">Enter Identity</string>
+    <string name="join_channel">Join Channel</string>
+    <string name="er_identity">Please enter Identity</string>
+</resources>

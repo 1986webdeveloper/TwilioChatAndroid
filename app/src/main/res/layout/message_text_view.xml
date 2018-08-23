@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:paddingTop="@dimen/default_item_spacing"
+    android:paddingBottom="@dimen/default_item_spacing"
+    android:layout_marginTop="@dimen/default_item_spacing"
+    android:layout_marginBottom="@dimen/default_item_spacing"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+     />
+<TextView android:id="@+id/tv_msg"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</TextView>
+<ImageView
+    android:scaleType="fitXY"
+    android:visibility="gone"
+    android:id="@+id/iv_image"
+    android:layout_width="150dp"
+    android:layout_height="150dp">
+
+</ImageView>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_videomessage"
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+     <VideoView
+         android:layout_alignParentStart="true"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentTop="true"
+         android:scaleType="fitXY"
+         android:visibility="gone"
+         android:id="@+id/vv_media"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+     </VideoView>
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:visibility="gone"
+        android:id="@+id/pdfViewMessage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        />
+</LinearLayout>

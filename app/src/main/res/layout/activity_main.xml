@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+    <ProgressBar
+       android:layout_centerInParent="true"
+        android:id="@+id/progress_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/default_item_spacing"
+        >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rl_preview"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="10"
+            android:visibility="gone">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_preview"
+                />
+            <VideoView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_preview_video" />
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <Button
+                android:layout_alignParentStart="true"
+                android:id="@+id/bt_cross"
+                android:background="@drawable/cross"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progress_media"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="10"
+            android:visibility="gone"/>
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:id="@+id/writeMessageEditText"
+            android:layout_marginEnd="@dimen/default_item_spacing"
+            android:textColor="@color/colorAccent" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_marginRight="@dimen/margin_5"
+            android:id="@+id/ib_attachment"
+            android:layout_width="@dimen/fab_dim"
+            android:layout_height="@dimen/fab_dim"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_action_attachment"
+            android:scaleType="fitCenter" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sendChatMessageButton"
+            android:layout_width="@dimen/fab_dim"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_action_send"/>
+       <!-- <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/send"
+            android:id="@+id/sendChatMessageButton"/>-->
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messagesRecyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
+</RelativeLayout>
